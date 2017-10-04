@@ -4,6 +4,11 @@ class Api::V1::PostsController < ApplicationController
     render json: @posts, status: 200
   end
 
+  def show
+    @post = Post.find(params[:id])
+    render json: @post, status: 200, include: [:user]
+  end
+
   def create
     @post = Post.create(post_params)
     render json: @post, status: 201
@@ -11,6 +16,6 @@ class Api::V1::PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:body)
+    params.permit(:content, :user_id)
   end
 end

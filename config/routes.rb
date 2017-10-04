@@ -3,10 +3,11 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:index, :create]
-      resources :posts, only: [:index, :create]
+      resources :users, only: [:index, :create, :show]
+      resources :posts, only: [:index, :create, :show]
       resources :comments, only: [:index, :create]
       resources :tags, only: [:index, :create]
+      resources :sessions, only: [:create, :index]
     end
   end
 end
