@@ -6,7 +6,7 @@ class Api::V1::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render json: @post, status: 200, include: [:user]
+    render json: @post, status: 200
   end
 
   def create
