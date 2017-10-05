@@ -4,6 +4,11 @@ class Api::V1::CommentsController < ApplicationController
     render json: @comments, status: 200
   end
 
+  def show
+    @comment = Comment.find(params[:id])
+    render json: @comment, status: 200
+  end
+
   def create
     @comment = Comment.create(comment_params)
     render json: @comment, status: 201

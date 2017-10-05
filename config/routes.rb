@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :create, :show]
       resources :posts, only: [:index, :create, :show]
-      resources :comments, only: [:index, :create]
+      resources :comments, only: [:index, :create, :show]
       resources :tags, only: [:index, :create]
       resources :sessions, only: [:create, :index]
     end
