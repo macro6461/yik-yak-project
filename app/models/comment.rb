@@ -3,6 +3,6 @@ class Comment < ApplicationRecord
   belongs_to :user
   has_many :tags
 
-  validates :content, length: { miximum: 200 }
+  # validates :content, length: { maximum: 200 }
 
 end
