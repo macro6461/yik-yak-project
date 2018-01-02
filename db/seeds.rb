@@ -12,7 +12,7 @@ User.create(name: "Joe", username: "joFoSho", email: "joe@joe.com")
 User.create(name: "Avi", username: "aviFlomBom", email: "avi@avi.com")
 User.create(name: "Max", username: "snackswell", email: "snacker@max.max")
 User.create(name: "Alex", username: "alexgriff", email: "alex@alex.com")
-User.create(name: "Rachel", username: "wauChillRach", email: "rach@rach.com")
+User.create(name: "Rachel", username: "wayChillRach", email: "rach@rach.com")
 
 Post.create(content: "hahaha blah yolo i'm writing a post ayy lmao", user_id: 1)
 Post.create(content: "is it happy hour yet?", user_id: 2)
