@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :tags
 
-  # validates :content, presence: true
-  # validates :content, length: {maximum: 200}
+  validates :content, presence: true
+  validates :content, length: {maximum: 200}
 end
