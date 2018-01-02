@@ -4,5 +4,5 @@ class Post < ApplicationRecord
   has_many :tags
 
   validates :content, presence: true
-  validates :content, length: {in: 1..200}
+  validates :content, length: {maximum: 200}
 end
