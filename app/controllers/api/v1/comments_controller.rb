@@ -12,6 +12,7 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
+    byebug
     @comment = Comment.create!(user_id: params["user_id"], post_id: params["post_id"], content: params["content"])
     render json: @comment, status: 201
   end

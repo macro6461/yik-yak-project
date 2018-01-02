@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :user
   has_many :tags
 
-  validate :presence, :true
+  validate :content, presence: true
   validates :content, length: { maximum: 200 }
 
 end
